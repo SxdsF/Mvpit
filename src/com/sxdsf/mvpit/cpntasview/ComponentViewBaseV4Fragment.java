@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import com.sxdsf.mvpit.FragmentInserter;
-import com.sxdsf.mvpit.MVPPresenter;
 import com.sxdsf.mvpit.cpntaspresenter.NonComponentMVPView;
+import com.sxdsf.mvpit.presenter.Presenter;
 
-public abstract class ComponentViewBaseV4Fragment<T extends NonComponentMVPView<? extends MVPPresenter>, I extends FragmentInserter>
+public abstract class ComponentViewBaseV4Fragment<T extends NonComponentMVPView<? extends Presenter>, I extends FragmentInserter>
 		extends Fragment {
 
 	protected T presenterLayer;

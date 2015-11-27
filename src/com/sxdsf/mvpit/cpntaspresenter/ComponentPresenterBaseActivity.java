@@ -7,9 +7,9 @@ package com.sxdsf.mvpit.cpntaspresenter;
 import android.app.Activity;
 import android.os.Bundle;
 import com.sxdsf.mvpit.ActivityInserter;
-import com.sxdsf.mvpit.MVPPresenter;
+import com.sxdsf.mvpit.presenter.Presenter;
 
-public abstract class ComponentPresenterBaseActivity<T extends NonComponentMVPView<? extends MVPPresenter>, I extends ActivityInserter>
+public abstract class ComponentPresenterBaseActivity<T extends NonComponentMVPView<? extends Presenter>, I extends ActivityInserter>
 		extends Activity {
 
 	protected T viewLayer;

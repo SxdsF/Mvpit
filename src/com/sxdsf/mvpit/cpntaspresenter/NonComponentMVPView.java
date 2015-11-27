@@ -3,11 +3,12 @@ package com.sxdsf.mvpit.cpntaspresenter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.sxdsf.mvpit.MVPPresenter;
-import com.sxdsf.mvpit.MVPView;
 
-public abstract class NonComponentMVPView<T extends MVPPresenter> implements
-		MVPView {
+import com.sxdsf.mvpit.presenter.Presenter;
+import com.sxdsf.mvpit.view.View;
+
+public abstract class NonComponentMVPView<T extends Presenter> implements
+		View {
 
 	protected T presenterLayer;
 

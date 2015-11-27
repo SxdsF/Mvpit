@@ -8,9 +8,9 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.sxdsf.mvpit.ActivityInserter;
-import com.sxdsf.mvpit.MVPView;
+import com.sxdsf.mvpit.view.View;
 
-public abstract class ComponentViewBaseActivity<T extends NonComponentMVPPresenter<? extends MVPView>, I extends ActivityInserter>
+public abstract class ComponentViewBaseActivity<T extends NonComponentMVPPresenter<? extends View>, I extends ActivityInserter>
 		extends Activity {
 
 	protected T presenterLayer;

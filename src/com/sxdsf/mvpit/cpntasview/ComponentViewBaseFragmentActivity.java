@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 import com.sxdsf.mvpit.ActivityInserter;
-import com.sxdsf.mvpit.MVPView;
+import com.sxdsf.mvpit.view.View;
 
-public abstract class ComponentViewBaseFragmentActivity<T extends NonComponentMVPPresenter<? extends MVPView>, I extends ActivityInserter>
+public abstract class ComponentViewBaseFragmentActivity<T extends NonComponentMVPPresenter<? extends View>, I extends ActivityInserter>
 		extends FragmentActivity {
 
 	protected T presenterLayer;
