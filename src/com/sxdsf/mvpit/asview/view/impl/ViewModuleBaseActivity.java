@@ -1,27 +1,27 @@
-package com.sxdsf.mvpit.view.impl;
+package com.sxdsf.mvpit.asview.view.impl;
 
-import com.sxdsf.mvpit.MvpMode;
-import com.sxdsf.mvpit.presenter.PresenterModule;
-import com.sxdsf.mvpit.view.ViewModule;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import com.sxdsf.mvpit.MvpMode;
+import com.sxdsf.mvpit.PresenterModule;
+import com.sxdsf.mvpit.asview.view.CpntAsViewBaseViewModule;
 
-public abstract class ViewModuleActivity<T extends PresenterModule<? extends ViewModule>>
-		extends Activity implements ViewModule {
+public abstract class ViewModuleBaseActivity<T extends PresenterModule> extends
+		Activity implements CpntAsViewBaseViewModule<T> {
 
-	protected T presenter;
+	protected T presenterModule;
 
-	private static final String TAG = "ViewModuleActivity";
+	private static final String TAG = "ViewModuleBaseActivity";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		Class<T> cls = this.getPresenterClass();
+		Class<T> cls = this.getPresenterModuleClass();
 		if (cls != null) {
 			try {
-				this.presenter = cls.newInstance();
+				this.presenterModule = cls.newInstance();
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
 				Log.e(TAG, e.getMessage());
@@ -30,9 +30,9 @@ public abstract class ViewModuleActivity<T extends PresenterModule<? extends Vie
 				Log.e(TAG, e.getMessage());
 			}
 		}
-//		if (this.presenter != null) {
-//			this.presenter.setViewModule(this);
-//		}
+		this.initDatas();
+		this.initComponents();
+		this.setEventExecutions();
 	}
 
 	@Override
@@ -40,7 +40,5 @@ public abstract class ViewModuleActivity<T extends PresenterModule<? extends Vie
 		// TODO Auto-generated method stub
 		return MvpMode.AndroidComponentAsView;
 	}
-
-	protected abstract Class<T> getPresenterClass();
 
 }

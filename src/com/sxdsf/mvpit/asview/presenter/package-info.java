@@ -5,4 +5,4 @@
  * @author sunbowen
  *
  */
-package com.sxdsf.mvpit.presenter;
+package com.sxdsf.mvpit.asview.presenter;
