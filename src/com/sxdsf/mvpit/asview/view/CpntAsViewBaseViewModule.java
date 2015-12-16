@@ -1,11 +1,14 @@
 package com.sxdsf.mvpit.asview.view;
 
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.sxdsf.mvpit.PresenterModule;
 import com.sxdsf.mvpit.ViewModule;
 
-public interface CpntAsViewBaseViewModule<T extends PresenterModule> extends ViewModule {
+public interface CpntAsViewBaseViewModule<T extends PresenterModule> extends
+		ViewModule {
 
 	/**
 	 * 返回对应的Presenter组件的class
@@ -22,11 +25,8 @@ public interface CpntAsViewBaseViewModule<T extends PresenterModule> extends Vie
 	/**
 	 * 初始化界面内的组件，以及相关设置
 	 */
-	public View initComponents();
+	public void initComponentsInActivity();
 
-	/**
-	 * 设置界面内组件的监听
-	 */
-	public void setEventExecutions();
-
+	public View initComponentsInFragment(LayoutInflater inflater,
+			ViewGroup container);
 }

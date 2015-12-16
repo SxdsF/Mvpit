@@ -3,8 +3,14 @@ package com.sxdsf.mvpit.asview.view.impl;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import butterknife.ButterKnife;
+
 import com.sxdsf.mvpit.MvpMode;
 import com.sxdsf.mvpit.PresenterModule;
+import com.sxdsf.mvpit.annotation.MvpitAnnotationProcessor;
 import com.sxdsf.mvpit.asview.view.CpntAsViewBaseViewModule;
 
 public abstract class ViewModuleBaseActivity<T extends PresenterModule> extends
@@ -31,8 +37,21 @@ public abstract class ViewModuleBaseActivity<T extends PresenterModule> extends
 			}
 		}
 		this.initDatas();
-		this.initComponents();
-		this.setEventExecutions();
+		this.initComponentsInActivity();
+	}
+
+	@Override
+	public void initComponentsInActivity() {
+		// TODO Auto-generated method stub
+		MvpitAnnotationProcessor.autoBindLayout(this);
+		ButterKnife.bind(this);
+	}
+
+	@Override
+	public final View initComponentsInFragment(LayoutInflater inflater,
+			ViewGroup container) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

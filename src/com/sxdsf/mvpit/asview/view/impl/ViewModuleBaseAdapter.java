@@ -1,7 +1,9 @@
 package com.sxdsf.mvpit.asview.view.impl;
 
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import com.sxdsf.mvpit.MvpMode;
 import com.sxdsf.mvpit.PresenterModule;
@@ -44,15 +46,16 @@ public abstract class ViewModuleBaseAdapter<T extends PresenterModule> extends
 	}
 
 	@Override
-	public final View initComponents() {
+	public final void initComponentsInActivity() {
 		// TODO Auto-generated method stub
-		return null;
+
 	}
 
 	@Override
-	public final void setEventExecutions() {
+	public final View initComponentsInFragment(LayoutInflater inflater,
+			ViewGroup container) {
 		// TODO Auto-generated method stub
-
+		return null;
 	}
 
 }

@@ -6,8 +6,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import butterknife.ButterKnife;
+
 import com.sxdsf.mvpit.MvpMode;
 import com.sxdsf.mvpit.PresenterModule;
+import com.sxdsf.mvpit.annotation.MvpitAnnotationProcessor;
 import com.sxdsf.mvpit.asview.view.CpntAsViewBaseViewModule;
 
 public abstract class ViewModuleBaseFragment<T extends PresenterModule> extends
@@ -40,9 +43,31 @@ public abstract class ViewModuleBaseFragment<T extends PresenterModule> extends
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		this.initDatas();
-		View view = this.initComponents();
-		this.setEventExecutions();
+		View view = this.initComponentsInFragment(inflater, container);
 		return view;
+	}
+
+	@Override
+	public final void initComponentsInActivity() {
+		// TODO Auto-generated method stub
+		// do nothing
+	}
+
+	@Override
+	public View initComponentsInFragment(LayoutInflater inflater,
+			ViewGroup container) {
+		// TODO Auto-generated method stub
+		int layoutId = MvpitAnnotationProcessor.autoBindLayout(this);
+		View view = inflater.inflate(layoutId, container, false);
+		ButterKnife.bind(this, view);
+		return view;
+	}
+
+	@Override
+	public void onDestroyView() {
+		// TODO Auto-generated method stub
+		super.onDestroyView();
+		ButterKnife.unbind(this);
 	}
 
 	@Override
