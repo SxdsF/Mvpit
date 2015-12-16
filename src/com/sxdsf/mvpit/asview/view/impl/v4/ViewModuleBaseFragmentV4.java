@@ -1,13 +1,11 @@
 package com.sxdsf.mvpit.asview.view.impl.v4;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import butterknife.ButterKnife;
-
 import com.sxdsf.mvpit.MvpMode;
 import com.sxdsf.mvpit.PresenterModule;
 import com.sxdsf.mvpit.annotation.MvpitAnnotationProcessor;
@@ -60,7 +58,6 @@ public abstract class ViewModuleBaseFragmentV4<T extends PresenterModule>
 		// TODO Auto-generated method stub
 		int layoutId = MvpitAnnotationProcessor.autoBindLayout(this);
 		View view = inflater.inflate(layoutId, container, false);
-		ButterKnife.bind(this, view);
 		return view;
 	}
 

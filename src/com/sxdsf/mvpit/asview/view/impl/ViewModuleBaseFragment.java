@@ -6,8 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import butterknife.ButterKnife;
-
 import com.sxdsf.mvpit.MvpMode;
 import com.sxdsf.mvpit.PresenterModule;
 import com.sxdsf.mvpit.annotation.MvpitAnnotationProcessor;
@@ -59,15 +57,7 @@ public abstract class ViewModuleBaseFragment<T extends PresenterModule> extends
 		// TODO Auto-generated method stub
 		int layoutId = MvpitAnnotationProcessor.autoBindLayout(this);
 		View view = inflater.inflate(layoutId, container, false);
-		ButterKnife.bind(this, view);
 		return view;
-	}
-
-	@Override
-	public void onDestroyView() {
-		// TODO Auto-generated method stub
-		super.onDestroyView();
-		ButterKnife.unbind(this);
 	}
 
 	@Override
