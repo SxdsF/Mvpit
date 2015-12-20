@@ -1,4 +1,4 @@
-package com.sxdsf.mvpit.sample;
+package com.sxdsf.mvpit.sample.multipresenter.activity;
 
 import com.sxdsf.mvpit.module.presenter.MvpitPresenterModule;
 
@@ -13,6 +13,6 @@ public class CommonPresenter<T extends CommonViewModule> extends MvpitPresenterM
 
     @Override
     protected void close() {
-        this.viewModule.get();
+
     }
 }

@@ -7,16 +7,13 @@ import com.sxdsf.mvpit.module.presenter.MvpitPresenterModule;
  */
 public class MainActivityPresenter extends MvpitPresenterModule<MainActivity> {
 
+    //需要一个构造方法使用super
     public MainActivityPresenter(MainActivity viewModule) {
         super(viewModule);
     }
 
-    void initData() {
-        this.viewModule.showLoading();
-    }
-
     @Override
     protected void close() {
-
+        //做本presenter的数据清理，还有资源关闭
     }
 }

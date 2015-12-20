@@ -9,8 +9,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.sxdsf.mvpit.sample.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/one_presenter_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="One Presenter Activity" />
+
+    <Button
+        android:id="@+id/multi_presenter_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/one_presenter_activity"
+        android:layout_centerHorizontal="true"
+        android:text="Multi Presenter Activity" />
+
+    <Button
+        android:id="@+id/one_presenter_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/multi_presenter_activity"
+        android:layout_centerHorizontal="true"
+        android:text="One Presenter Fragment" />
+
+    <Button
+        android:id="@+id/multi_presenter_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/one_presenter_fragment"
+        android:layout_centerHorizontal="true"
+        android:text="Multi Presenter Fragment" />
 </RelativeLayout>
