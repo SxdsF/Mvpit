@@ -11,6 +11,6 @@ public abstract class MvpitPresenterModule<T extends ViewModule> implements
         this.viewModule = viewModule;
     }
 
-    protected abstract void close();
+    public abstract void close();
 
 }

@@ -8,14 +8,14 @@ import android.view.ViewGroup;
 
 import com.sxdsf.mvpit.annotation.BindLayout;
 import com.sxdsf.mvpit.annotation.BindPresenterModule;
-import com.sxdsf.mvpit.module.view.impl.MvpitViewModuleBaseFragment;
+import com.sxdsf.mvpit.sample.BaseFragment;
 import com.sxdsf.mvpit.sample.R;
 
 import butterknife.ButterKnife;
 
 @BindLayout(R.layout.fragment_one)
 @BindPresenterModule(OnePresenter.class)
-public class OneFragment extends MvpitViewModuleBaseFragment<OnePresenter> {
+public class OneFragment extends BaseFragment<OnePresenter> {
 
     @Override
     public void initData() {

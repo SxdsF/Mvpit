@@ -47,13 +47,13 @@ public abstract class MvpitViewModuleBaseFragment<T extends PresenterModule> ext
                              Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         this.initData();
-        View view = this.initComponents(inflater, container);
+        View view = this.initComponents(inflater, container, savedInstanceState);
         return view;
     }
 
     @Override
     public View initComponents(LayoutInflater inflater,
-                               ViewGroup container) {
+                               ViewGroup container, Bundle saveInstanceState) {
         // TODO Auto-generated method stub
         int layoutId = MvpitAnnotationProcessor.autoBindLayout(this);
         View view = inflater.inflate(layoutId, container, false);

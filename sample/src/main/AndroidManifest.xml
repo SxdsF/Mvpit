@@ -18,7 +18,8 @@
         <activity android:name=".onepresenter.activity.OnePresenterActivity" />
         <activity android:name=".multipresenter.activity.MultiPresenterActivity" />
         <activity android:name=".onepresenter.fragment.OneFragmentActivity" />
-        <activity android:name=".multipresenter.fragment.MultiFragmentActivity"></activity>
+        <activity android:name=".multipresenter.fragment.MultiFragmentActivity" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>

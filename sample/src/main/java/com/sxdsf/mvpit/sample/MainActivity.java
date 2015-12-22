@@ -1,11 +1,11 @@
 package com.sxdsf.mvpit.sample;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 
 import com.sxdsf.mvpit.annotation.BindLayout;
 import com.sxdsf.mvpit.annotation.BindPresenterModule;
-import com.sxdsf.mvpit.module.view.impl.MvpitViewModuleBaseActivity;
 import com.sxdsf.mvpit.sample.multipresenter.activity.MultiPresenterActivity;
 import com.sxdsf.mvpit.sample.multipresenter.fragment.MultiFragmentActivity;
 import com.sxdsf.mvpit.sample.onepresenter.activity.OnePresenterActivity;
@@ -18,7 +18,7 @@ import butterknife.OnClick;
 @BindLayout(R.layout.activity_main)
 //绑定本activity的presenter
 @BindPresenterModule(MainActivityPresenter.class)
-public class MainActivity extends MvpitViewModuleBaseActivity<MainActivityPresenter> {
+public class MainActivity extends BaseActivity<MainActivityPresenter> {
 
     @Override
     public void initData() {
@@ -26,9 +26,9 @@ public class MainActivity extends MvpitViewModuleBaseActivity<MainActivityPresen
     }
 
     @Override
-    public void initComponents() {
+    public void initComponents(Bundle saveInstanceState) {
         //这里做控件初始化，要先使用super
-        super.initComponents();
+        super.initComponents(saveInstanceState);
         ButterKnife.bind(this);
     }
 

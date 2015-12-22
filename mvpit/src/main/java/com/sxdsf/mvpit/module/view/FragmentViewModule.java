@@ -1,5 +1,6 @@
 package com.sxdsf.mvpit.module.view;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,5 +10,5 @@ import android.view.ViewGroup;
  */
 public interface FragmentViewModule extends MvpitViewModule {
 
-    View initComponents(LayoutInflater inflater, ViewGroup container);
+    View initComponents(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState);
 }

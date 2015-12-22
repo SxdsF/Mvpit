@@ -7,13 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sxdsf.mvpit.annotation.BindLayout;
-import com.sxdsf.mvpit.module.view.impl.MvpitViewModuleBaseFragment;
+import com.sxdsf.mvpit.sample.BaseFragment;
 import com.sxdsf.mvpit.sample.R;
 
 import butterknife.ButterKnife;
 
 @BindLayout(R.layout.fragment_multi)
-public class MultiFragment extends MvpitViewModuleBaseFragment<MultiPresenter> implements CommonViewModule {
+public class MultiFragment extends BaseFragment<MultiPresenter> implements CommonViewModule {
 
     private CommonPresenter commonPresenter;
 

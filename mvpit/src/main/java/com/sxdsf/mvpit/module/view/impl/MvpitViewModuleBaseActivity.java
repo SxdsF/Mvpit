@@ -38,11 +38,11 @@ public abstract class MvpitViewModuleBaseActivity<T extends PresenterModule> ext
             }
         }
         this.initData();
-        this.initComponents();
+        this.initComponents(savedInstanceState);
     }
 
     @Override
-    public void initComponents() {
+    public void initComponents(Bundle saveInstanceState) {
         // TODO Auto-generated method stub
         MvpitAnnotationProcessor.autoBindLayout(this);
     }
