@@ -18,7 +18,7 @@ public class MultiFragment extends BaseFragment<MultiPresenter> implements Commo
     private CommonPresenter commonPresenter;
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
         this.commonPresenter = new CommonPresenter(this);
     }
 

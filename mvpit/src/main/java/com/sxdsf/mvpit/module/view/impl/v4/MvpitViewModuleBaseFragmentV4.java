@@ -38,22 +38,21 @@ public abstract class MvpitViewModuleBaseFragmentV4<T extends PresenterModule> e
                 // TODO Auto-generated catch block
                 Log.e(TAG, e.getMessage());
             }
-
         }
+        this.initData(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        this.initData();
         View view = this.initComponents(inflater, container, savedInstanceState);
         return view;
     }
 
     @Override
     public View initComponents(LayoutInflater inflater,
-                               ViewGroup container, Bundle saveInstanceState) {
+                               ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         int layoutId = MvpitAnnotationProcessor.autoBindLayout(this);
         View view = inflater.inflate(layoutId, container, false);

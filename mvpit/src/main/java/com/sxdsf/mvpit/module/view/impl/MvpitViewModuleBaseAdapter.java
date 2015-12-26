@@ -35,6 +35,5 @@ public abstract class MvpitViewModuleBaseAdapter<T extends PresenterModule> exte
                 Log.e(TAG, e.getMessage());
             }
         }
-        this.initData();
     }
 }

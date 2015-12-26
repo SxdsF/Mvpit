@@ -1,5 +1,7 @@
 package com.sxdsf.mvpit.sample.multipresenter.fragment;
 
+import android.os.Bundle;
+
 import com.sxdsf.mvpit.annotation.BindLayout;
 import com.sxdsf.mvpit.sample.BaseActivity;
 import com.sxdsf.mvpit.sample.R;
@@ -8,7 +10,7 @@ import com.sxdsf.mvpit.sample.R;
 public class MultiFragmentActivity extends BaseActivity {
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
 
     }
 }

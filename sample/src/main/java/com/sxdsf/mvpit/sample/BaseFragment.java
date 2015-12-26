@@ -1,6 +1,8 @@
 package com.sxdsf.mvpit.sample;
 
 
+import android.os.Bundle;
+
 import com.sxdsf.mvpit.module.presenter.MvpitPresenterModule;
 import com.sxdsf.mvpit.module.view.impl.MvpitViewModuleBaseFragment;
 
@@ -8,7 +10,7 @@ public abstract class BaseFragment<T extends MvpitPresenterModule> extends Mvpit
 
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
 
     }
 

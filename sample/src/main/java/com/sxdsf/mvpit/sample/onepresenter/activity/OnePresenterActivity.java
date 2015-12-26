@@ -14,13 +14,13 @@ import butterknife.ButterKnife;
 public class OnePresenterActivity extends BaseActivity<OnePresenter> {
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
 
     }
 
     @Override
-    public void initComponents(Bundle saveInstanceState) {
-        super.initComponents(saveInstanceState);
+    public void initComponents(Bundle savedInstanceState) {
+        super.initComponents(savedInstanceState);
         ButterKnife.bind(this);
     }
 

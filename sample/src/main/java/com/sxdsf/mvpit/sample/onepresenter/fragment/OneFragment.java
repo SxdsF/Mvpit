@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 public class OneFragment extends BaseFragment<OnePresenter> {
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
 
     }
 

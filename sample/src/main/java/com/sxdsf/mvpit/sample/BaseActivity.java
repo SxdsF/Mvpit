@@ -1,5 +1,7 @@
 package com.sxdsf.mvpit.sample;
 
+import android.os.Bundle;
+
 import com.sxdsf.mvpit.annotation.BindLayout;
 import com.sxdsf.mvpit.module.presenter.MvpitPresenterModule;
 import com.sxdsf.mvpit.module.view.impl.MvpitViewModuleBaseActivity;
@@ -8,7 +10,7 @@ import com.sxdsf.mvpit.module.view.impl.MvpitViewModuleBaseActivity;
 public abstract class BaseActivity<T extends MvpitPresenterModule> extends MvpitViewModuleBaseActivity<T> {
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
 
     }
 

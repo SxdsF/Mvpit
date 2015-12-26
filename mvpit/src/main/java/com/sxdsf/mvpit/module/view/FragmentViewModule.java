@@ -10,5 +10,5 @@ import android.view.ViewGroup;
  */
 public interface FragmentViewModule extends MvpitViewModule {
 
-    View initComponents(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState);
+    View initComponents(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
 }

@@ -21,14 +21,14 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity<MainActivityPresenter> {
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
         //在这里做数据初始化，比如接收上一个界面的传值
     }
 
     @Override
-    public void initComponents(Bundle saveInstanceState) {
+    public void initComponents(Bundle savedInstanceState) {
         //这里做控件初始化，要先使用super
-        super.initComponents(saveInstanceState);
+        super.initComponents(savedInstanceState);
         ButterKnife.bind(this);
     }
 

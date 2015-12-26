@@ -17,7 +17,7 @@ public class MultiPresenterActivity extends BaseActivity<MultiPresenter> impleme
     private CommonPresenter commonPresenter;
 
     @Override
-    public void initData() {
+    public void initData(Bundle savedInstanceState) {
         //第二个presenter初始化
         this.commonPresenter = new CommonPresenter(this);
     }

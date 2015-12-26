@@ -7,5 +7,5 @@ import android.os.Bundle;
  */
 public interface ActivityViewModule extends MvpitViewModule {
 
-    void initComponents(Bundle saveInstanceState);
+    void initComponents(Bundle savedInstanceState);
 }
